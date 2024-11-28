@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Project by Ghulam Murtaza Dahar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Inventory Project by Ghulam Murtaza Dahar</h1>
+    </div>
+
+    <div class="form-outbox"> 
+   <div class="form-container">
+        <div class="input-group">
+            <label for="productName">Product</label>
+            <select id="productName" class="input-field">
+                <option value="iPhone">iPhone</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Beg">Beg</option>
+                <option value="Glasses">Glasses</option>
+                <option value="Shoes">Shoes</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="price">Price (Rs)</label>
+            <input type="number" id="price" class="input-field" readonly>
+        </div>
+        <div class="input-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" class="input-field">
+        </div>
+        <div class="input-group">
+            <label for="amount">Amount (Rs)</label>
+            <input type="number" id="amount" class="input-field" readonly>
+        </div>
+        <button id="addButton" class="btn-add">Add</button>
+    </div>
+        </div>
+
+ 
+    <div class="report-container">
+        <table id="inventoryTable" class="inventory-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price (Rs)</th>
+                    <th>Quantity</th>
+                    <th>Amount (Rs)</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total Amount (Rs)</td>
+                    <td id="totalAmount">0</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Total Amount with 17% GST (Rs)</td>
+                    <td id="totalAmountGST">0</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <!-- <button id="generateInvoiceButton" class="btn-generate">Generate Invoice</button> -->
+    <div id="invoiceContainer" class="invoice-container"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
